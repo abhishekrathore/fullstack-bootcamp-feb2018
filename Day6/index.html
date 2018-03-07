@@ -1,0 +1,32 @@
+<html>
+    <head>
+    <script src="jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="content">
+                <input id="demo" type="text">
+                <input type="password">
+                <input type="email">
+                <input type="number">
+                <input type="radio">
+                <input type="checkbox">
+                <textarea name="" id="text" cols="30" rows="10" onkeypress="printtext(event)">
+                </textarea>
+                <input type="file">
+                <select name="" id="dropdown" onchange="printval()">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>none</option>
+
+                </select>
+                <input type="submit">
+                <button  onclick="print()">Print</button>
+                <div id="print">
+
+                </div>
+
+        </div>
+        <script src="app.js"></script>
+
+    </body>
+</html>
