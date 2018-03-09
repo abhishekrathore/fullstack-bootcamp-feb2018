@@ -1,0 +1,23 @@
+<html ng-app="demoApp">
+    <head>
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+
+        
+
+        <div ng-controller="firstCtrl as first">
+        <input type="text" ng-model="first.name">
+        <h1>{{first.name}}</h1>
+        <h2 ng-if="first.show">Show</h2>
+        </div>
+        
+
+       <div ng-controller="secondCtrl as second">
+        <input type="text" ng-model="name">
+        <p>{{name}}</p>
+     </div>
+
+    </body>
+</html>
