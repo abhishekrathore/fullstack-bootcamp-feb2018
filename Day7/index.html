@@ -1,0 +1,26 @@
+<html ng-app>
+    <head>
+        <script src="angular.min.js"></script>
+    </head>
+    <body>
+        <input type="text" ng-model="name">
+        <input type="text" ng-model="color">
+        <h1 style="color:{{color}}">{{name}}</h1>
+        <a ng-href="{{name}}">Link</a>
+        <img ng-src="{{name}}.png" alt="">
+        <h1 ng-if="name=='sachin'">Show it when Name is Sachin</h1>
+
+        <select name="" id="" ng-model="pic">
+            <option value="cloud">1</option>
+            <option value="coder">2</option>
+        </select>
+        <input type="number" ng-model="rotation">
+        <img style="transform:rotate({{rotation}}deg)" ng-src="{{pic}}.png" alt="">
+
+
+       Cricket <input type="radio" name="sports" ng-model="radio1" >
+       Hockey <input type="radio" name="sports" ng-model="radio1">
+       {{radio1}}
+
+    </body>
+</html>
