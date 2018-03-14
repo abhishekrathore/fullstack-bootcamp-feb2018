@@ -1,0 +1,38 @@
+<html  ng-app="demo">
+    <head>
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="node_modules/flag-icon-css/css/flag-icon.css">
+    <style>
+    .flag-icon{
+        width:4em;
+        line-height: 3em;
+    }
+    
+    
+    </style>
+    </head>
+  
+   
+    <body>
+
+     <div ng-controller = "flagCtrl as flag">
+            <span class="flag-icon flag-icon-{{flag.countries[flag.r]['alpha-2']}}"></span>
+            <input type="text" ng-model="flag.input">
+            <button ng-click="flag.reset()">Reset</button>
+
+            <h1 ng-if="flag.input==flag.correctName && flag.input">Correct</h1>
+<!-- 
+        <div ng-repeat="country in flag.countries">
+        </div> -->
+
+    
+
+     </div>
+   
+       
+    
+
+
+    </body>
+</html>
