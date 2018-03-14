@@ -1,0 +1,55 @@
+<html  ng-app="demo">
+    <head>
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <style>
+
+         .done{
+            text-decoration: line-through;
+        }
+    
+    </style>
+   
+    <body>
+
+        <div ng-controller="demoCtrl as demo">
+                <input type="number" ng-model="demo.a">
+                <select name="" id="" ng-model="demo.operation">
+                    <option>sum</option>
+                    <option>diff</option>
+                    <option>multiply</option>
+                </select>
+                <input type="number" ng-model="demo.b">
+        
+                <div>{{demo.result()}}</div>
+        </div>
+
+
+        <div ng-controller="secondCtrl as second">
+            <input type="text" ng-model="second.name">
+            <button ng-click="second.add()">Add</button>
+
+            <div>{{second.done()}}/{{second.countries.length}}</div>
+          <ul>
+              <li ng-class="{'done':country.status}" ng-repeat="country in second.countries">
+                 
+                
+                {{$index+1}}. {{country.name}}
+                 <button ng-click="second.delete($index)">X</button>
+                 <button ng-click="country.status=!country.status">done</button>
+
+                 {{country.time | date:" MMM dd h:m a"}}
+
+              </li>
+              
+            </ul>
+             
+        </div>
+   
+       
+    
+
+
+    </body>
+</html>
