@@ -5,3 +5,10 @@
 3. [JS Assignments](./js_assignments.md)
 4. [AngularJS Assignments](./angularjs_assignment.md)
 
+Create a  Simple program to get following out put
+ * Create List of Person [ Name, Age, Photo (http url) ]
+ * Click on object to show details
+ * Click on object to show image
+ * Use service to store the user data
+ * Create a filter to sort by Name and Age (Ascending and Descending)
+
