@@ -5,7 +5,7 @@
 3. [JS Assignments](./js_assignments.md)
 4. [AngularJS Assignments](./angularjs_assignment.md)
 
-Create a  Simple program to get following out put
+Create a  Simple program to get following output
  * Create List of Person [ Name, Age, Photo (http url) ]
  * Click on object to show details
  * Click on object to show image
