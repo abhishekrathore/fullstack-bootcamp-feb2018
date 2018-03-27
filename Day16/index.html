@@ -1,0 +1,19 @@
+<html ng-app="routingApp">
+    <head>
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="app.js"></script>
+
+    </head>
+    <body>
+        <div>This is a static part</div>
+        <ul>
+            <li><a href="/#!/home">Home</a></li>
+            <li><a href="/#!/aboutus">About us</a></li>
+
+        </ul>
+        <ng-view>
+
+        </ng-view>
+    </body>
+</html>
