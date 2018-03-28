@@ -4,6 +4,7 @@
 2. [JS Basics -1 ](./js_basic_1.md)
 3. [JS Assignments](./js_assignments.md)
 4. [AngularJS Assignments](./angularjs_assignment.md)
+5. [AngularJS Routes Assignment ](./angularjs_routes.md)
 
 Create a  Simple program to get following output
  * Create List of Person [ Name, Age, Photo (http url) ]
