@@ -4,16 +4,24 @@ angular.module("ecomm",['ngRoute'])
 
  .factory("products",products)
  .config(config)
+ .run()
 
  function config($routeProvider){
      $routeProvider
-    .when("/category/:category",
+    .when("/category/:cat/:rating",
     {
         templateUrl:"partials/category.html",
         controller:"categoryCtrl",
         controllerAs:"category"
 
    })
+   .when("/category/:cat",
+   {
+       templateUrl:"partials/category.html",
+       controller:"categoryCtrl",
+       controllerAs:"category"
+
+  })
     .when("/cart",
      {
          templateUrl:"partials/cart.html",
@@ -34,15 +42,17 @@ angular.module("ecomm",['ngRoute'])
 
  function categoryCtrl(products,$routeParams){
    var category = this;
-   console.log($routeParams.category)
+   console.log($routeParams.cat)
    category.list = products;
    category.index = 0;
    
 for(var i=0;i<products.length;i++){
-    if($routeParams.category==products[i].name){
+    if($routeParams.cat==products[i].name){
         category.index = i;
     }
 }
+
+category.rating = $routeParams.rating
 
 
    category.customfilter = function(actual,input){
@@ -57,7 +67,7 @@ for(var i=0;i<products.length;i++){
  return [
      {
          name:"shoes",
-         products:[{"id":1,"name":"nike air",price:12.00,desc:"this is great shoe",rating:3},
+         products:[{"id":1,"name":"nike air",price:12.00,desc:"this is great shoe",rating:5},
                    {"id":2,"name":"adidas air",price:14.00,desc:"this is great shoe",rating:4},
                    {"id":3,"name":"reebok air",price:15.00,desc:"this is great shoe",rating:5}]
     },
