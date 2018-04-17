@@ -1,0 +1,37 @@
+<html  ng-app="demo">
+    <head>
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <style>
+
+        
+    </style>
+   
+    <body>
+
+        <div ng-controller="demoCtrl as demo">
+            <input type="text" ng-model="demo.name">
+            <button ng-click="demo.getGender()">Get Gender</button>
+            <button ng-click="demo.getChars()">Get Chars</button>
+
+            <h1>Name : {{demo.person}}</h1>
+            <h1>Gender : {{demo.gender}}</h1>
+
+
+            <h1>{{demo.char.name}}</h1>
+            <img style ="width:200px;height:200px" ng-src="{{demo.char.thumbnail.path +'.'+ demo.char.thumbnail.extension}}" alt="">
+
+            <p>{{demo.char.description}}</p>
+
+
+
+
+        </div>
+   
+       
+    
+
+
+    </body>
+</html>
