@@ -6,6 +6,7 @@
 4. [AngularJS Assignments](./angularjs_assignment.md)
 5. [AngularJS Routes Assignment ](./angularjs_routes.md)
 6. [AngularJS API Assignment ](./angular-api.md)
+7. [Node Assignment ](./node-js.md)
 
 Create a  Simple program to get following output
  * Create List of Person [ Name, Age, Photo (http url) ]
