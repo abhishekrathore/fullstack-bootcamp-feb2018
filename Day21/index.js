@@ -18,7 +18,7 @@ MongoClient.connect(url, function(err, client) {
 
 server.get("/data",function(req,res){
         var name =  req.query.playerName;
-    DB.collection("players").find({"name":name}).toArray(function(err,result){
+    DB.collection("players").find({"name":name}).project({'name':1}).toArray(function(err,result){
        res.json(result)
     })
 
